@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guia de Aromaterapia</title>
   <style>
-    /* Estilos gerais */
+    *{
+        font-family: Arial, sans-serif;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #ffffff;
@@ -24,6 +27,7 @@
     }
     .menu {
       display: flex;
+      justify-content: center;
       overflow-x: auto;
       background-color: #230344;
       padding: 10px;
@@ -41,6 +45,7 @@
       border-radius: 20px;
       transition: background-color 0.3s, transform 0.1s;
       outline: none;
+      font-family: Arial, sans-serif;
     }
     .menu button:active {
       background-color: #ddd; /* Cor para indicar toque */
@@ -60,7 +65,11 @@
     }
     p {
       line-height: 1.6;
-      color: #666;
+      color: #818080;
+    }
+
+    .header p{
+        color: #ffffff;
     }
 
     /* Estilos para dispositivos móveis */
@@ -71,6 +80,7 @@
       .menu button {
         font-size: 12px;
         padding: 10px 15px;
+        font-family: Arial, sans-serif;
       }
     }
   </style>
@@ -81,20 +91,14 @@
   <div class="header">
     <img src="./logo.jpg" alt="" height="200px" height="200px">
     <h1>Guia de Aromaterapia</h1>
-    <p>Descubra os benefícios e usos dos óleos essenciais</p>
+    <p>Guia Essencial Para o Bem Estar Físico e Mental</p>
   </div>
 
   <!-- Menu de Navegação -->
   <div class="menu">
     <button onclick="showSection('presentation')">Apresentação</button>
-    <button onclick="showSection('selfCare')">Autocuidado</button>
-    <button onclick="showSection('emotionalBalance')">Equilíbrio Emocional</button>
-    <button onclick="showSection('metabolismBoost')">Ativação Metabólica</button>
-    <button onclick="showSection('immunityBoost')">Imunidade</button>
-    <button onclick="showSection('antimicrobial')">Antimicrobiana</button>
-    <button onclick="showSection('postShift')">Pós Plantão</button>
-    <button onclick="showSection('footBath')">Escalda-pés</button>
-    <button onclick="showSection('protocolos')">Protocolos de Autocuidado</button>
+
+    <button onclick="showSection('protocolos')">Protocolos De Autocuidado</button>
     <button onclick="showSection('essenciais')">Óleos Essenciais</button>
     <button onclick="showSection('descontaminacao')">Dicas para descontaminação</button>
   </div>
@@ -110,36 +114,9 @@
         Inserida no Sistema Único de Saúde (SUS) por meio da Portaria Nº 702, de 21 de março de 2018, a aromaterapia compõe o rol de 29 modalidades terapêuticas institucionalizadas com a Política Nacional de Práticas Integrativas e Complementares. \nA inclusão das PICS no SUS, como política, posicionou o Brasil na vanguarda mundial da inserção das Medicinas Tradicionais, Complementares e Integrativas (MTCI) no sistema nacional de saúde. <br>
     </p>
     </div>
-    <div id="selfCare" class="section">
-      <h2>Autocuidado com Aromaterapia</h2>
-      <p>Pode ser realizada de maneira suave na área cardíaca e/ou através de pequenas percussões entre as mamas. Nas massagens, utilizaremos os óleos essenciais diluídos de 2 a 5%, ou seja, de 40 a 100 gotas de óleo essencial em 100 ml de óleo vegetal. Realizar fricções com movimentos calmos, com concentração, ou seja, totalmente presente e com as mãos quentes. Na inalação úmida, adicione três (3) gotas num pequeno recipiente (copo ou bacia) e coloque sobre a cabeça uma toalha para aumentar a concentração do óleo inalado. Cuidado, não abra os olhos durante a inalação. <br><br>Para o uso coletivo - difundir os óleos por meio de sprays ou difusores ambientais. No spray, diluir 20 a 100 gotas em 60 ml de álcool de cerais e 40 ml de água. No difusor elétrico de cerâmica ou plástico, utilizar sete (7) a dez (10) gotas do óleo essencial sem misturas. <br><br>VIA DE ADMINISTRACAO DERMATOLOGIA (MASSAGEM) -Pode ser realizada de maneira suave na área cardíaca e/ ou através de pequenas percussões entre as mamas. Nas massagens, utilizaremos os óleos essenciais diluídos de 2 a 5%, 40 a 100 gotas de óleo essencial em 100 ml de óleo vegetal. Realizar fricções com movimentos calmos, com concentração, ou seja, totalmente presente e com as mãos quentes.</p>
-    </div>
-    <div id="emotionalBalance" class="section">
-      <h2>Óleos para Equilíbrio Emocional</h2>
-      <p>Lavanda francesa, laranja doce, tangerina e cedro. O óleo de lavanda francesa apresentou excelentes resultados para a ansiedade, comparado com o lorazepan e a laranja doce produz efeito calmante, auxiliando o relaxamento e o sono reparador.</p>
-    </div>
-    <div id="metabolismBoost" class="section">
-      <h2>Óleos para Ativação Metabólica</h2>
-      <p>Orégano, tomilho, canela, cravo e anis ou gengibre. O alecrim traz disposição, energia e coragem, é um excelente óleo para ser utilizado pela manhã, renovando as energias para o turno de trabalho (no entanto, hipertensos e epiléticos devem evitá-lo).</p>
-    </div>
-    <div id="immunityBoost" class="section">
-      <h2>Óleos para Aumento da Imunidade</h2>
-      <p>Tea tree, eucalipto, Niaouli, Ravensara e Hortelã</p>
-    </div>
-    <div id="antimicrobial" class="section">
-      <h2>Óleos com Ação Antimicrobiana</h2>
-      <p>Manjerona (seu óleo possui quantidades significativas de monoterpenos (em especial terpinen-4-ol) que apresenta atividade antibacteriana de amplo espectro.  O óleo essencial de tea tree inibe a replicação do vírus da gripe H1N1, o eugenol presente nos óleos essenciais de canela do Ceilão e cravo possui grande potencial de ligação com proteínas responsáveis pela penetração e pela multiplicação do vírus, assim como o louro e o eucalipto glóbulos.</p>
-    </div>
-    <div id="postShift" class="section">
-      <h2>Descontaminação Pós Plantão</h2>
-      <p>Além dos cuidados de desinfecção como descartar e/ou retirar batas, aventais, capotes, gorros, sapatos, luvas e máscaras, e lavar adequadamente as mãos, indica-se a inalação dos óleos essenciais que vão atuar descontaminando o trato respiratório. Acrescente como parte das rotinas de higiene o bochecho com duas (2) gotas de óleo essencial de tea tree, cipreste em um copo com água. O óleo não dilui na água, portanto, agite bastante antes de usar. Não engolir.</p>
-    </div>
-    <div id="footBath" class="section">
-      <h2>Escalda-pés</h2>
-      <p>Manter os pés aquecidos é fundamental, revitaliza o organismo e equilibra a distribuição de calor no corpo, melhorando o metabolismo. Fortalece a nutrição, atrai e circula os elementos de defesa do sangue. Aumenta o fluxo sanguíneo no metabolismo e músculos, reduzindo, portanto, a atividade cerebral, a congestão de pensamentos que dificultam o descanso e o sono reparador após o trabalho exaustivo. Nessa modalidade, podemos nos beneficiar com substâncias, ervas aromáticas e temperos de uso doméstico. Despejar a água quente no balde, testar a temperatura da água, algo próximo a 40 graus, adicionar o óleo essencial, cinco (5) a dez (10) gotas diluídos no óleo vegetal ou no leite (apenas o suficiente para diluir o óleo), mergulhar os pés até as panturrilhas, envolver com um lençol toda a cintura até o chão, formando um invólucro de calor por fora do balde. <br><br>Permanecer por 15 minutos. Evitar estímulos audiovisuais durante o processo. Após cinco (5) minutos, levantar um pouco os pés para verter cuidadosamente mais água quente para manter a temperatura inicial. Ao término do procedimento, secar somente o excesso da água, calçar meias e dormir. Em todo o processo não poderá haver choque de temperatura, ou seja, não poderá colocar os pés no chão frio. Por isso, coloque uma toalha ao lado do balde para pisar quando estiver finalizando. Indicações de plantas aromáticas úteis para promoção do bem-estar de pacientes, para a população em geral que podem ser utilizadas na técnica de escalda-pés: Rosmarinus officinalis L.: o alecrim é um dos principais representantes quando falamos em plantas aromáticas. Utilizado na culinária, em ritos religiosos, na indústria cosmética/cosmecêutica e em diversas práticas terapêuticas, seu uso remonta ao Egito Antigo e a arte de embalsamar múmias. Seu aroma característico desperta sensações revigorantes e estimulam nossa mente e corpo. <br><br>O alecrim pode ser utilizado de forma complementar em escalda-pés, com finalidade de melhorar a circulação no local, como anti-inflamatório e analgésico. O aroma liberado durante o escalda-pés pode ter efeito estimulante, assim como seu óleo essencial. Recomenda-se que esse escalda-pés seja realizado na parte da manhã, para fornecer um aporte circulatório para os membros inferiores e, paralelamente, promover sensação revigorante e bem-estar. Salvia officinalis L.: o nome sálvia deriva do latim salvare, que significa curar, salvar, em referência às suas propriedades curativas. Aplicada topicamente, essa planta aromática apresenta propriedades antissépticas e anti-inflamatórias. <br><br>A sálvia apresenta uso etnomedicinal no tratamento da ansiedade, tensão pré-menstrual e sintomas do climatério. Segundo a medicina antroposófica, a sálvia “domina e aquece o organismo onde há liquefação, configurando e estruturando tecidos”, além de apresentar propriedades anti-inflamatórias, quando vaporizada ou aplicada topicamente. \nA infusão de sálvia é considerada tônica do sistema circulatório, sendo, portanto, uma planta aromática extremamente útil em terapias de escalda-pés. \nOriganum majorana L.: a manjerona é uma planta aromática extensamente utilizada na culinária. Porém, quando falamos de manjerona em aromacologia (estudos dos óleos essenciais e seus efeitos psicológicos e energéticos), referimos aos efeitos antimicrobiano e sedativo, especialmente para pessoas emocionalmente cansadas que tendem a ficar agitadas. As espécies do gênero origanum (família Lamiaceae) têm sido usadas desde a antiguidade na medicina e como especiarias, principalmente devido aos seus óleos essenciais. Assim, a manjerona em escalda-pés promoverá um efeito relaxante e utilizá-la à noite pode favorecer a qualidade do sono.</p>
-    </div>
+    
     <div id="protocolos" class="section">
-        <h2>Protocolos De Autocuidado Para Uso Da Aromaterapia Via De Administração (DERMATOLOGICA, INALATORIA, ESCALDA PES)</h2>
+        <h2>Protocolos De Autocuidado Para Uso Da Aromaterapia</h2>
         <h3>Via de administração inalatória</h3>
         <p>Para o uso individual - pingar uma (1) a três (3) gotas em qualquer um dos recursos seguintes: na palma das mãos, num lenço, no travesseiro, em um chumaço de algodão, num colar aromático. Realize inalações profundas com o auxílio das musculaturas diafragmática e abdominal, retenha o ar por alguns segundos e expire bem lentamente exalando pela boca. Nesse processo, contraia a musculatura abdominal para eliminar o máximo de ar. Realize três repetições. <br><br>
             Na inalação úmida, adicione três (3) gotas num pequeno recipiente (copo ou bacia) e coloque sobre a cabeça uma toalha para aumentar a concentração do óleo inalado. Cuidado, não abra os olhos durante a inalação. <br><br>
@@ -175,12 +152,11 @@
         <h2>Óleos Essenciais Sugeridos para...</h2>
         <p>
             
-            Paz e Equilíbrio emocional: lavanda francesa, laranja doce, tangerina e cedro. O óleo de lavanda francesa apresentou excelentes resultados para a ansiedade, comparado com o lorazepan e a laranja doce produz efeito calmante, auxiliando o relaxamento e o sono reparador. <br> <br>
+            Óleos essenciais sugeridos , aperta e aparePaz e Equilíbrio emocional: lavanda francesa, laranja doce, tangerina e cedro. O óleo de lavanda francesa apresentou excelentes resultados para a ansiedade, comparado com o lorazepan e a laranja doce produz efeito calmante, auxiliando o relaxamento e o sono reparador. <br><br>
             Disposição - orégano, tomilho, canela, cravo e anis ou gengibre. <br>
             O alecrim traz disposição, energia e coragem, é um excelente óleo para ser utilizado pela manhã, renovando as energias para o turno de trabalho (no entanto, hipertensos e epiléticos devem evitá-lo). <br><br>
-            Aumentar a  imunidade: tea tree, eucalipto, niaouli, ravensara e hortelã. <br>
-            Ação antimicrobiana: Manjerona (seu óleo possui quantidades significativas de monoterpenos (em especial terpinen-4-ol) que apresenta atividade antibacteriana de amplo espectro.  O óleo essencial de tea tree inibe a replicação do vírus da gripe H1N1, o eugenol presente nos óleos essenciais de canela do Ceilão e cravo possui grande potencial de ligação com proteínas responsáveis pela penetração e pela multiplicação do vírus, assim como o louro e o eucalipto glóbulos. <br><br>
-
+            Aumentar a  imunidade: tea tree, eucalipto, niaouli, ravensara e hortelã. <br> <br>
+            Ação antimicrobiana: Manjerona (seu óleo possui quantidades significativas de monoterpenos (em especial terpinen-4-ol) que apresenta atividade antibacteriana de amplo espectro.  O óleo essencial de tea tree inibe a replicação do vírus da gripe H1N1, o eugenol presente nos óleos essenciais de canela do Ceilão e cravo possui grande potencial de ligação com proteínas responsáveis pela penetração e pela multiplicação do vírus, assim como o louro e o eucalipto glóbulos. <br>
 
         </p>
 
